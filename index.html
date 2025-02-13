@@ -13,7 +13,7 @@
         }
         header h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 48px;
         }
         nav {
             display: flex;
@@ -26,6 +26,7 @@
             text-decoration: none;
             font-weight: bold;
             padding: 5px 10px;
+            font-size: 18px;
         }
         nav a:hover {
             background-color: #555;
@@ -43,16 +44,19 @@
             width: 100%;
             text-align: center;
         }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
         .profile {
-            position: absolute;
-            top: 160px;
-            left: 20px;
+            flex: 1;
+            max-width: 350px;
             text-align: left;
             padding: 30px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            width: 300px;
         }
         .profile img {
             width: 250px;
@@ -65,8 +69,34 @@
         }
         .profile h2, .profile p {
             margin: 10px 0;
-            font-size: 1.2em;
+            font-size: 1.5em;
             text-align: center;
+        }
+        .contact {
+            flex: 1;
+            max-width: 350px;
+            text-align: left;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin-left: 20px;
+        }
+        .about {
+            flex: 2;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin-left: 20px;
+        }
+        .resume {
+            width: 100%;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -76,16 +106,32 @@
         <nav>
             <a href="#">Home</a>
             <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <a href="#">Leadership</a>
         </nav>
     </header>
 
-    <div class="profile">
-        <img src="profile.jpg" alt="Profile Photo">
-        <h2>Alec Amador</h2>
-        <p>Virginia Tech</p>
-        <p>Major: Mechanical Engineering</p>
-        <p>Minor: International Business</p>
+    <div class="container">
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Photo">
+            <h2>Alec Amador</h2>
+            <p>Virginia Tech (Blacksburg)</p>
+            <p>Major: Mechanical Engineering</p>
+            <p>Minor: International Business</p>
+        </div>
+        <div class="contact">
+            <h2>Contact Info</h2>
+            <p>Email: aleczamador@gmail.com</p>
+            <p>Phone: 540-809-7191</p>
+        </div>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>I am a sophomore studying Mechanical Engineering at Virginia Tech with a minor in International Business. I co-lead the Structures team for MachWorks, an engineering design team focused on aircraft development. I am also the Vice President of Governance for the Council for International Student Organizations (CISO) and serve on the Undergraduate Student Senate’s Equity and Inclusion Committee. My technical interests include UAV fuel systems, computational modeling, and materials research. I have studied abroad in South Korea and Spain, and I have a strong passion for international collaboration in engineering.</p>
+        </div>
+    </div>
+
+    <div class="resume">
+        <h2>Resume</h2>
+        <p>Coming soon...</p>
     </div>
 
     <footer>
