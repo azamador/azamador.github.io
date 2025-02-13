@@ -1,13 +1,29 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
 header {
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+nav {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
 }
 nav {
     margin-top: 10px;
@@ -64,6 +80,3 @@ footer {
 <h2>Hello, World!</h2>
 <p>This is the homepage of my website. More content coming soon!</p>
 </section>
-<footer>
-&copy; 2025 My Website | All rights reserved.
-</footer>
