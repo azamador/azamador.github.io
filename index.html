@@ -72,16 +72,6 @@
             font-size: 1.5em;
             text-align: center;
         }
-        .contact {
-            flex: 1;
-            max-width: 350px;
-            text-align: left;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            margin-left: 20px;
-        }
         .about {
             flex: 2;
             padding: 30px;
@@ -90,6 +80,15 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             margin-left: 20px;
         }
+        .contact {
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
         .resume {
             width: 100%;
             padding: 30px;
@@ -97,6 +96,20 @@
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             margin-top: 20px;
+            text-align: center;
+        }
+        .resume img {
+            width: 250px;
+            height: 350px;
+            border-radius: 5px;
+            border: 4px solid #333;
+            background-color: #ddd;
+            display: block;
+            margin: 0 auto;
+        }
+        .contact p {
+            display: inline;
+            margin-right: 15px;
         }
     </style>
 </head>
@@ -118,20 +131,20 @@
             <p>Major: Mechanical Engineering</p>
             <p>Minor: International Business</p>
         </div>
-        <div class="contact">
-            <h2>Contact Info</h2>
-            <p>Email: aleczamador@gmail.com</p>
-            <p>Phone: 540-809-7191</p>
-        </div>
         <div class="about">
             <h2>About Me</h2>
             <p>I am a sophomore studying Mechanical Engineering at Virginia Tech with a minor in International Business. I co-lead the Structures team for MachWorks, an engineering design team focused on aircraft development. I am also the Vice President of Governance for the Council for International Student Organizations (CISO) and serve on the Undergraduate Student Senate’s Equity and Inclusion Committee. My technical interests include UAV fuel systems, computational modeling, and materials research. I have studied abroad in South Korea and Spain, and I have a strong passion for international collaboration in engineering.</p>
         </div>
     </div>
 
+    <div class="contact">
+        <h2>Contact Info</h2>
+        <p>Email: aleczamador@gmail.com | Phone: 540-809-7191</p>
+    </div>
+
     <div class="resume">
         <h2>Resume</h2>
-        <p>Coming soon...</p>
+        <img src="resume-placeholder.jpg" alt="Resume Placeholder">
     </div>
 
     <footer>
