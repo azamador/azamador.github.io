@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alec Amador's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         header {
             background-color: #333;
@@ -111,19 +112,78 @@
             display: inline;
             margin-right: 15px;
         }
+        .projects {
+            width: 100%;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            text-align: center;
+        }
+        .project-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .project-item h3 {
+            margin: 0 0 10px;
+        }
+        .project-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-item a:hover {
+            text-decoration: underline;
+        }
+        .leadership {
+            width: 100%;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            text-align: center;
+        }
+        .leadership-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .leadership-item h3 {
+            margin: 0 0 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .about {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Alec Amador</h1>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Projects</a>
-            <a href="#">Leadership</a>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#leadership">Leadership</a>
         </nav>
     </header>
 
-    <div class="container">
+    <div id="home" class="container">
         <div class="profile">
             <img src="profile.jpg" alt="Profile Photo">
             <h2>Alec Amador</h2>
@@ -133,7 +193,30 @@
         </div>
         <div class="about">
             <h2>About Me</h2>
-            <p>I am a sophomore studying Mechanical Engineering at Virginia Tech with a minor in International Business. I co-lead the Structures team for MachWorks, an engineering design team focused on aircraft development. I am also the Vice President of Governance for the Council for International Student Organizations (CISO) and serve on the Undergraduate Student Senate’s Equity and Inclusion Committee. My technical interests include UAV fuel systems, computational modeling, and materials research. I have studied abroad in South Korea and Spain, and I have a strong passion for international collaboration in engineering.</p>
+            <p>Personal Paragraph goes here</p>
+        </div>
+    </div>
+
+    <div id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Project Title 1</h3>
+            <p>Description of the project goes here.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project-item">
+            <h3>Project Title 2</h3>
+            <p>Description of the project goes here.</p>
+            <a href="#">View Project</a>
+        </div>
+    </div>
+
+    <div id="leadership" class="leadership">
+        <h2>Leadership</h2>
+        <div class="leadership-item">
+            <h3>Position Title</h3>
+            <p>Organization Name</p>
+            <p>Description of your role and achievements.</p>
         </div>
     </div>
 
@@ -150,5 +233,16 @@
     <footer>
         <p>&copy; 2025 Alec Amador. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
